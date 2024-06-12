@@ -47,10 +47,7 @@ addEventListener('keydown', function(event) {
         }
     }
 
-    while (true) {
-        arrowup.remove();
-        
-    }
+   
 });
 }
 start();
