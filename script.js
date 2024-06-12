@@ -1,9 +1,10 @@
 let user
-const gohigher = new Audio();
-const golower = new Audio();
-
+const gohigher = new Audio('soundeffects/ding-126626.mp3');
+const golower = new Audio('soundeffects/boing-2-44164.mp3');
+const won = new Audio('soundeffects/yay-6120.mp3');
 
 function start() {
+
     let correct = Math.floor(Math.random() * 3);
 
 addEventListener('keydown', function(event) {
@@ -12,12 +13,13 @@ addEventListener('keydown', function(event) {
        
         let user = prompt("pls enter a number")
                
-        if (correct > user) {
+        if (correct > user) {           
+             gohigher.play();           
             alert("higher");
-            
         }
 
         else if (correct < user) {
+            golower.play();
             alert("lower");
         }
 
@@ -25,6 +27,7 @@ addEventListener('keydown', function(event) {
         // user guesses correctly
         
         else {
+            won.play();
             alert("congrats");
             correct = Math.floor(Math.random() * 3); 
             alert("a new number has been chosen")
