@@ -7,20 +7,25 @@ const golower = new Audio('soundeffects/boing-2-44164.mp3');
 const won = new Audio('soundeffects/yay-6120.mp3');
 let username
 let user
-
-
 function start() {
 
     let correct = Math.floor(Math.random() * 9 + 1);
          username = prompt("ur name?")
 
 addEventListener('keydown', function(event) {
-    console.log(username);
     
     if (event.key === 'Enter') {
-        console.log(correct);
+        const userbox = document.getElementById("n")
+        const button = document.getElementById("btn");
 
-         user = prompt("pls enter a number" + username);
+
+
+        button.addEventListener('click', function() {
+            console.log(user);
+
+
+         user = userbox.value
+        
 
         if (correct > user) {           
              gohigher.play();           
@@ -28,10 +33,14 @@ addEventListener('keydown', function(event) {
             h1.append(arrowup);
         }
 
+         
+
         else if (correct < user) {
             golower.play();
             alert("lower");
         }
+
+        
 
         // user guesses correctly
         else {
@@ -42,12 +51,9 @@ addEventListener('keydown', function(event) {
             alert("a new number has been chosen")
         }
 
-        if (username === null) {
-            alert("u gotta enter a name");
-        }
+        
+     })
     }
-
-   
 });
 }
 start();
