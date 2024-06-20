@@ -19,13 +19,10 @@ function start() {
     let correct = Math.floor(Math.random() * 9 + 1);
          username = prompt("ur name?")
 
-addEventListener('keydown', function(event) {
     
-    if (event.key === 'Enter') {
         const userbox = document.getElementById("n")
         const button = document.getElementById("btn");
         let sc = document.getElementById("sc")
-        alert("the game starts"); 
 
 
 
@@ -72,9 +69,18 @@ addEventListener('keydown', function(event) {
         
      })
     }
-});
-}
+;
+
 start();
 // if i put math floor within the eventlistener, each time enter i pressed a new number is calculated, which is why i have to declare it outside 
 
+
+function levelone() {
+    score = 0
+    document.createElement('p')
+    p.innerText = "level 1"
+    correct =  Math.floor(Math.random() * 5 + 1);
+     
+    
+}
   
