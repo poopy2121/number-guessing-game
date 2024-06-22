@@ -98,3 +98,5 @@ function mediumlevel() {
     p.innerText = "level 3"
     correct =  Math.floor(Math.random() * 5 + 1);
     }
+
+    //main branch
